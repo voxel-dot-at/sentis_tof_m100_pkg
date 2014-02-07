@@ -1,0 +1,13 @@
+<!-- 
+	Parameter server configuration for sentis_tof_m100_ros_pkg.
+
+	See http://www.ros.org/wiki/sentis_tof_m100_ros_pkg for more information.
+-->
+<launch>
+  <node pkg="sentis_tof_m100" type="sentis_tof_m100_node" name="sentis_tof_m100_1"
+        args="" required="true" output="screen" >
+        <rosparam command="load" file="$(find sentis_tof_m100)/launch/sentis_tof_m100_1.yaml" />
+  </node>
+  <node name="rqt_reconfigure" pkg="rqt_reconfigure" type="rqt_reconfigure" />
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find sentis_tof_m100)/launch/rvizConfig.rviz" />
+</launch>

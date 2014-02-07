@@ -1,0 +1,33 @@
+network: {
+tcp_ip: "192.168.0.10",
+tcp_port: 10001,
+udp_ip: "224.0.0.1",
+udp_port: 10002,
+}
+
+frameRate: 20
+integrationTime: 1500
+modulationFrecuency: 20000
+
+filters: {
+mediaFilter: true,
+filterMedianConfig: 1,
+averageFilter: false,
+filterAverageConfig_Pixels: false,
+filterAverageConfig_Iters: 1,
+gaussFilter: false,
+filterGaussConfig_Pixels: false,
+filterGaussConfig_Iters: 1,
+slidingAverage: false,
+wigglingCompensation: true,
+FPPNCompensation: true,
+scalingMM: true,
+additiveOffset: true,
+temperatureCompensation: true,
+scalingDistCalibGradient: false,
+scalingDistCalibOffset: true,
+filterSLAFconfig: 22
+}
+amplitudeFilter: false
+amplitudeThreshold: 0
+
