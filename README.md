@@ -12,7 +12,7 @@ It shows you how to use the camera together with ROS and how you can modify diff
 
 The sentis_tof_m100_ros_pkg works with ROS versions groovy and hydro. You can use catkin workspaces or the previous rosbuild to configure, compile and get ready ROS.
 
-The following ROS tutorial links describes how to get ros_hydro and catkin workspace.
+The following ROS tutorial links describe how to get ros_hydro and catkin workspace.
 
 In Ubuntu:
 Follow the ROS installation tutorial: 
@@ -62,14 +62,14 @@ catkin_make
 
 # 3. Usage #
 
-We have included a .launch file to help you to get the camera working in an very simple way. We coded this ROS package to use the ROS parameter server. We will explain you in the following lines how you can write your own configuration for the Sentis ToF Camera. You can also run the package node standalone and set the camera configuration by line commands.
+We have included a .launch file to help you to get the camera working in a very simple way. We coded this ROS package to use the ROS parameter server. We will explain you in the following lines how you can write your own configuration for the Sentis ToF Camera. You can also run the package node standalone and set the camera configuration by line commands.
 
 ### * Watch our demo video:  ###
 
 > http://youtu.be/3xegxf5VFWc
 
 ### 3.1 Use roslaunch ###
-To easily start using the sentis_tof_m100 ROS package you may use the roslaunch config_file we have included. It will launch the ROS core, start the camera node loading the parameter configuration, start the run-time reconfiguration gui and the ROS viewer rviz already configured to show the depth information read by the ToF camera.
+To easily start using the sentis_tof_m100 ROS package you can use the roslaunch config_file we have included. It will launch the ROS core, start the camera node loading the parameter configuration, start the run-time reconfiguration gui and the ROS viewer rviz already configured to show the depth information readed by the ToF camera.
 
 In order to execute it you have just to type the following:
 
@@ -80,7 +80,7 @@ In order to execute it you have just to type the following:
 
 As we pointed out before, you can load the camera configuration to the parameter server. The file "launch/start.launch" includes, inside the tag "node", the tag "rosparam" in which you can indicate a file containing the server parameters. We have include the configuration file "/launch/sentis_tof_m100_1.yaml" that defines default configuration values for the camera. You may modify this file or add yours to load your own configuration.
 
-To get more information about the Sentis_ToF_M100 camera parameter please refer to the section 4. 
+To get more information about the Sentis_ToF_M100 camera parameter, please refer to the section 4. 
 
 ### 3.2 running the package without roslaunch ###
 
@@ -119,64 +119,64 @@ You can start up the camera without the help of roslaunch with the following ste
 	Integration time(in usec) for the sensor 
 	(min: 50 | max: 7000 | default: 1500) 
 -mf  *Modulation_Frequency* 
-	Set the modulation frequency(Hz) of the sensor 
+	Sets the modulation frequency(Hz) of the sensor 
 	(min: 5000 | max: 30000 | default: 20000) 
 -fr *Frame_Rate* 
-	Set the frame rate of the camera by setting the Phase Time 
+	Sets the frame rate of the camera 
 	(min: 1 | max: 45 | default: 40)
 -mef *MedianFilter* 
-	Set on or off the Median Filter. 
+	Sets on or off the Median Filter. 
 	(OFF: 0 | ON: any other integer value |  ON if not set ) 
 -avf *AverageFilter* 
-	Set on or off the Average Filter. 
+	Sets on or off the Average Filter. 
 	(OFF: 0 | ON: any other integer value |  ON if not set ) 
 -gaf *GaussFilter* 
-	Set on or off the Gauss Filter. 
+	Sets on or off the Gauss Filter. 
 	(OFF: 0 | ON: any other integer value |  ON if not set ) 
 -sla *SlidingAverage* 
-	Set on or off the Sliding Average. 
+	Sets on or off the Sliding Average. 
 	(OFF: 0 | ON: any other integer value |  ON if not set ) 
 -wic *WigglingCompensation* 
-	Set on or off the Wiggling Compensation. 
+	Sets on or off the Wiggling Compensation. 
 	(OFF: 0 | ON: any other integer value |  ON if not set ) 
 -fppnc *FPPNCompensation* 
-	Set on or off the FPPN Compensation. 
+	Sets on or off the FPPN Compensation. 
 	(OFF: 0 | ON: any other integer value |  ON if not set ) 
 -mfs *ModFreqScaling* 
-	Set on or off the ModFreq Scaling. 
+	Sets on or off the ModFreq Scaling. 
 	(OFF: 0 | ON: any other integer value |  ON if not set ) 
 -smm *Scalingmm* 
-	Set on or off the Scaling to [mm]. 
+	Sets on or off the Scaling to [mm]. 
 	(OFF: 0 | ON: any other integer value |  ON if not set ) 
 -aos *AdditiveOffset* 
-	Set on or off the Additive Offset. 
+	Sets on or off the Additive Offset. 
 	(OFF: 0 | ON: any other integer value |  ON if not set ) 
 -tmc *TemperatureCompensation* 
-	Set on or off the Temperature Compensation. 
+	Sets on or off the Temperature Compensation. 
 	(OFF: 0 | ON: any other integer value |  ON if not set ) 
 -sdcg *ScalingDistCalibGradient* 
-	Set on or off the Scaling via register DistCalibGradient. 
+	Sets on or off the Scaling via register DistCalibGradient. 
 	(OFF: 0 | ON: any other integer value |  ON if not set ) 
 -sdco *ScalingDistCalibOffset* 
-	Set on or off the Scaling via register DistCalibOffset. 
+	Sets on or off the Scaling via register DistCalibOffset. 
 	(OFF: 0 | ON: any other integer value |  ON if not set ) 
 -mefite *FilterMedian_Config* 
-	Set the nº of iteration for the Media filter. 
+	Sets the nº of iteration for the Media filter. 
 	(min: 1 | max: 255 | default: 1) 
 -avfpix *FilterAverage_Config_Pixels* 
-	Set pixel matrix for the Average filter. 
+	Sets pixel matrix for the Average filter. 
 	(3x3: 0 | 5x5: 1 | Default: 3x3 ) 
 -avfite *FilterAverage_Config_Iters* 
-	Set the nº of iteration for the Average filter. 
+	Sets the nº of iteration for the Average filter. 
 	(min: 1 | max: 255 | default: 1) 
 -gafpix *FilterGauss_Config_Pixels* 
-	Set pixel matrix for the Gauss filter. 
+	Sets pixel matrix for the Gauss filter. 
 	(3x3: 0 | 5x5: 1 | Default: 3x3 ) 
 -gafite *FilterGauss_Config_Iters* 
-	Set the nº of iteration for the Gauss filter. 
+	Sets the nº of iteration for the Gauss filter. 
 	(min: 1 | max: 255 | default: 1) 
 -slacw *FilterSLAF_config* 
-	Set the SLAF filter windows size. 
+	Sets the SLAF filter windows size. 
 	(min: 1 | max: 255 | default: 1) 
 -af *Amplitude_Filter_On* 
 	Whether to apply amplitude filter or not. Image pixels with amplitude values less than the threshold will be filtered out 
@@ -206,7 +206,7 @@ Add a Pointcloud2 topic to visualize the clouds. Two different point sets are pu
 
 #### 3.2.4 Using filters and parameters configuration ####
 
-To use the filters and change camera parameters at runtime, use rqt_reconfigure from ROS. To use it just run (after launching sentis_tof_m100_ros_pkg)
+To use the filters and change camera parameters at runtime, use rqt_reconfigure from ROS. To use it just run (after launching sentis_tof_m100_ros_pkg):
 
 <pre><code>rosrun rqt_reconfigure rqt_reconfigure 
 </code></pre>
@@ -217,11 +217,11 @@ To use the filters and change camera parameters at runtime, use rqt_reconfigure 
 
 Here you will find a quick description of the camera parameter that can be set in this package:
 
-* Network Options
+* Network options
 
-> **Note1:** Make sure network is correctly configured. We recommend to follow the API instructions to check the whether the camera and you network are working without any problem.
+> **Note1:** Make sure your network is correctly configured. We recommend you to follow the API instructions to check whether the camera and your network are working without any problem.
 
-> **Note2:** Network parameter cannot be changed at runtime.
+> **Note2:** Network parameters cannot be changed at runtime.
 
 * * **TCP_IP_Address :** The control connection with your sentis_tof_m100 camera.
 * * **TCP_IP_Port :** The port used by the control connection.
