@@ -10,7 +10,7 @@ It shows you how to use the camera together with ROS and how you can modify diff
 
 ## First step: Get Ros ##
 
-The sentis_tof_m100_ros_pkg works with ROS versions groovy and hydro. You can user catkin workspaces or the previous rosbuild to configure, compile and get ready ROS.
+The sentis_tof_m100_ros_pkg works with ROS versions groovy and hydro. You can use catkin workspaces or the previous rosbuild to configure, compile and get ready ROS.
 
 The following ROS tutorial links describes how to get ros_hydro and catkin workspace.
 
