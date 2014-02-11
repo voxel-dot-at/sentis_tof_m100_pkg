@@ -93,7 +93,7 @@ You can start up the camera without the help of roslaunch with the following ste
 
 #### 3.2.2 Start capturing ####
 
-<pre><code>rosrun argos3d_p100 argos3d_p100_node #[options]
+<pre><code>rosrun sentis_tof_m100 sentis_tof_m100_node #[options]
 </code></pre>
 
 *Use --help parameter to display parameter initialization usage*
@@ -186,7 +186,7 @@ You can start up the camera without the help of roslaunch with the following ste
 	(min: 0 | max: 2500 | default: 0) 
 
  Example:
-rosrun sentis_tof_m100 sentis_tof_m100 -tcp_ip 192.168.0.10 -tcp_port 10001 -it 1500 -mf 20000 -fr 20 
+rosrun sentis_tof_m100 sentis_tof_m100_node -tcp_ip 192.168.0.10 -tcp_port 10001 -it 1500 -mf 20000 -fr 20 
 </code></pre>
 
 #### 3.2.3 Visualization in rviz ####
