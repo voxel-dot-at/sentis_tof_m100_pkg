@@ -15,7 +15,6 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   roslib
   rospy
-  message_generation
   sensor_msgs
   std_msgs
   tf  
@@ -28,29 +27,6 @@ find_package(catkin REQUIRED COMPONENTS
 ## modules and global scripts declared therein get installed
 ## See http://ros.org/doc/api/catkin/html/user_guide/setup_dot_py.html
 # catkin_python_setup()
-
-#######################################
-## Declare ROS messages and services ##
-#######################################
-
-## Generate messages in the 'msg' folder
-add_message_files(
-   FILES
-   Num.msg
-)
-
-## Generate services in the 'srv' folder
-add_service_files(
-   FILES
-   AddTwoInts.srv
-)
-
-## Generate added messages and services with any dependencies listed here
-generate_messages(
-   DEPENDENCIES
-   sensor_msgs
-   std_msgs
-)
 
 generate_dynamic_reconfigure_options(
   cfg/sentis_tof_m100.cfg
