@@ -1,10 +1,11 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(sentis_tof_m100)
 
-## check required prerequisites
+## check required modules
+SET(CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/external")
+FIND_PACKAGE(m100 REQUIRED)
 
-
-
+find_package(PCL REQUIRED)
 
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
@@ -27,6 +28,7 @@ find_package(catkin REQUIRED COMPONENTS
 ## modules and global scripts declared therein get installed
 ## See http://ros.org/doc/api/catkin/html/user_guide/setup_dot_py.html
 # catkin_python_setup()
+
 
 generate_dynamic_reconfigure_options(
   cfg/sentis_tof_m100.cfg
@@ -52,10 +54,11 @@ catkin_package(
 ## Build ##
 ###########
 
-## Specify additional locations of header files
-## Your package locations should be listed before other locations
-# include_directories(include)
-include_directories(${catkin_INCLUDE_DIRS} /usr/include/libm100)
+include_directories(
+  ${catkin_INCLUDE_DIRS}
+  ${m100_INCLUDE_DIR}
+  ${PCL_INCLUDE_DIRS}
+)
 
 ## Declare a cpp library
 # add_library(sentis_m100
@@ -76,7 +79,7 @@ add_dependencies(sentis_tof_m100_node ${PROJECT_NAME}_gencfg)
 # target_link_libraries(sentis_m100_node
 #   ${catkin_LIBRARIES}
 # )
-target_link_libraries(sentis_tof_m100_node ${catkin_LIBRARIES} m100)
+target_link_libraries(sentis_tof_m100_node ${catkin_LIBRARIES} ${m100_LIBRARY})
 
 #############
 ## Install ##
