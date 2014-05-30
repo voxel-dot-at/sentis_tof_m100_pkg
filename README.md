@@ -49,7 +49,7 @@ Make sure you have the following ROS dependencies already installed:
 
 #### 2.2 Install the package ####
 
-Clone from repository: https://github.com/voxel-dot-at/sentis_tof_m100_ros_pkg.git
+Clone from repository: https://github.com/voxel-dot-at/sentis_tof_m100_pkg.git
 to the src/ folder in your catkin workspace.
 Now compile it with:
 <pre><code>cd catkin_ws
