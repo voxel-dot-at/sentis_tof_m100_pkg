@@ -1,5 +1,15 @@
 sentis_tof_m100_ros_pkg
 ===================
+
+---
+This ROS package uses an old api for the Bluetechnix Sentis ToF m100 sensor.
+
+There is a new package (https://github.com/voxel-dot-at/bta_ros) that uses the new [BltToFApi](https://support.bluetechnix.at/wiki/Bluetechnix_'Time_of_Flight'_API) developed by Bluetechnix for interacting with their sensors.
+
+We recommend to use the new bta_ros package.
+
+---
+
 ### ROS package for Bluetechnix Sentis ToF M100 camera. ###
 
 # Summary #
